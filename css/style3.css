@@ -49,3 +49,27 @@ button{
 }
 
 /* animation */
+#pop-up{
+    top: -400px;
+    transform-origin: left;
+    animation: drop .5s ease forwards,
+        swing 1.5s 2s ease forwards,
+        fall .5s 3.7s ease forwards;
+}
+
+
+@keyframes drop{
+    0%{opacity: 0;}
+    70%{transform: translateY(700px);}
+    100%{transform: translateY(650px); opacity: 1;}
+}
+@keyframes swing{
+    0%{transform: translateY(650px) rotateZ(0deg);}
+    40%{transform: translateY(650px) rotateZ(90deg);}
+    70%{transform: translateY(650px) rotateZ(55deg);}
+    100%{transform: translateY(650px) rotateZ(65deg);}
+}
+@keyframes fall{
+    0%{transform: translateY(650px) rotateZ(65deg);}
+    100%{transform: translateY(1200px) rotateZ(65deg);}
+}
